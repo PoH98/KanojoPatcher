@@ -1,0 +1,284 @@
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.Animator AnimationManager::animator
+OpCode: ldfld
+Operand:
+OpCode: ldnull
+Operand: System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+OpCode: call
+Operand: IL_0016: ret
+OpCode: brtrue.s
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.AnimationClip[] AnimationManager::randomAnim
+OpCode: ldfld
+Operand: IL_0017: ldc.i4.0
+OpCode: brtrue.s
+Operand:
+OpCode: ret
+Operand:
+OpCode: ldc.i4.0
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.AnimationClip[] AnimationManager::randomAnim
+OpCode: ldfld
+Operand:
+OpCode: ldlen
+Operand:
+OpCode: conv.i4
+Operand: System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
+OpCode: call
+Operand:
+OpCode: stloc.0
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.AnimatorOverrideController AnimationManager::animatorOverrideController
+OpCode: ldfld
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.AnimationClip AnimationManager::initRandomIdle
+OpCode: ldfld
+Operand: System.String UnityEngine.Object::get_name()
+OpCode: callvirt
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.AnimationClip[] AnimationManager::randomAnim
+OpCode: ldfld
+Operand:
+OpCode: ldloc.0
+Operand:
+OpCode: ldelem.ref
+Operand: System.Void UnityEngine.AnimatorOverrideController::set_Item(System.String,UnityEngine.AnimationClip)
+OpCode: callvirt
+Operand:
+OpCode: ldarg.0
+Operand: UnityEngine.Animator AnimationManager::animator
+OpCode: ldfld
+Operand:
+OpCode: ldarg.0
+Operand: System.String AnimationManager::randomIdleStateName
+OpCode: ldfld
+Operand: 0.35
+OpCode: ldc.r4
+Operand: System.Void UnityEngine.Animator::CrossFadeInFixedTime(System.String,System.Single)
+OpCode: callvirt
+Operand:
+OpCode: ret
+=================================
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::get_defaltIdleState()
+OpCode: call
+Operand: IL_0037: ldarg.0
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: ldfld
+Operand: IL_0037: ldarg.0
+OpCode: brtrue.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.1
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: System.Single UnityEngine.Time::get_time()
+OpCode: call
+Operand: System.Single AnimationManager::waitStartTime
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: 30
+OpCode: ldc.r4
+Operand: 39
+Operand: 60
+OpCode: ldc.r4
+Operand: 41
+Operand: System.Single UnityEngine.Random::Range(System.Single,System.Single)
+OpCode: call
+Operand: System.Single AnimationManager::waitDuration
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::get_defaltIdleState()
+OpCode: call
+Operand: IL_004E: ldarg.0
+OpCode: brtrue.s
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: ldfld
+Operand: IL_004E: ldarg.0
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: ldfld
+Operand: IL_0095: ldarg.0
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::get_isIdleState()
+OpCode: call
+Operand: IL_008E: ldarg.0
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand: VoiceController AnimationManager::vc
+OpCode: ldfld
+Operand: System.Boolean VoiceController::get_CanSpeak()
+OpCode: callvirt
+Operand: IL_008E: ldarg.0
+OpCode: brfalse.s
+Operand: System.Single UnityEngine.Time::get_time()
+OpCode: call
+Operand:
+OpCode: ldarg.0
+Operand: System.Single AnimationManager::waitStartTime
+OpCode: ldfld
+Operand:
+OpCode: sub
+Operand:
+OpCode: ldarg.0
+Operand: System.Single AnimationManager::waitDuration
+OpCode: ldfld
+Operand: IL_0095: ldarg.0
+OpCode: ble.un.s
+Operand:
+OpCode: ldarg.0
+Operand: System.Void AnimationManager::PlayRandomAnim()
+OpCode: call
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: stfld
+Operand: IL_0095: ldarg.0
+OpCode: br.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.0
+Operand: System.Boolean AnimationManager::waitForRandom
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: System.Boolean AnimationManager::waitForExit
+OpCode: ldfld
+Operand: IL_00BE: ldc.i4.s 49
+OpCode: brfalse.s
+Operand: System.Single UnityEngine.Time::get_time()
+OpCode: call
+Operand:
+OpCode: ldarg.0
+Operand: System.Single AnimationManager::startWaitForExitTime
+OpCode: ldfld
+Operand:
+OpCode: sub
+Operand:
+OpCode: ldarg.0
+Operand: System.Single AnimationManager::waitForExitDuration
+OpCode: ldfld
+Operand: IL_00BE: ldc.i4.s 49
+OpCode: ble.un.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.0
+Operand: System.Boolean AnimationManager::waitForExit
+OpCode: stfld
+Operand:
+OpCode: ldarg.0
+Operand: System.Void AnimationManager::PlayDefaultAnim()
+OpCode: call
+Operand: 49
+OpCode: ldc.i4.s
+Operand: System.Boolean UnityEngine.Input::GetKeyDown(UnityEngine.KeyCode)
+OpCode: call
+Operand: IL_00CF: ldc.i4.s 50
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.0
+Operand: System.Void AnimationManager::TestAnim(System.Int32)
+OpCode: call
+Operand:
+OpCode: ret
+Operand: 50
+OpCode: ldc.i4.s
+Operand: System.Boolean UnityEngine.Input::GetKeyDown(UnityEngine.KeyCode)
+OpCode: call
+Operand: IL_00E0: ldc.i4.s 51
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.1
+Operand: System.Void AnimationManager::TestAnim(System.Int32)
+OpCode: call
+Operand:
+OpCode: ret
+Operand: 51
+OpCode: ldc.i4.s
+Operand: System.Boolean UnityEngine.Input::GetKeyDown(UnityEngine.KeyCode)
+OpCode: call
+Operand: IL_00F0: ret
+OpCode: brfalse.s
+Operand:
+OpCode: ldarg.0
+Operand:
+OpCode: ldc.i4.2
+Operand: System.Void AnimationManager::TestAnim(System.Int32)
+OpCode: call
+Operand:
+OpCode: ret
+===============
+OpCode: ldarg.0
+Operand:
+Offset: 34
+OpCode: ldc.i4.s
+Operand: 15
+Offset: 35
+OpCode: ldarg.0
+Operand:
+Offset: 37
+OpCode: ldfld
+Operand: UnityEngine.AnimationClip[] AnimationManager::randomAnim
+Offset: 38
+OpCode: ldlen
+Operand:
+Offset: 43
+OpCode: conv.i4
+Operand:
+Offset: 44
+OpCode: div
+Operand:
+Offset: 45
+OpCode: ldc.i4
+Operand: 39000
+Offset: 46
+OpCode: ldc.i4
+Operand: 41000
+Offset: 51
+OpCode: call
+Operand: System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
+Offset: 56
+OpCode: mul
+Operand:
+Offset: 61
+OpCode: conv.r4
+Operand:
+Offset: 62
+OpCode: stfld
+Operand: System.Single AnimationManager::waitDuration

@@ -1,0 +1,10 @@
+E:\Repos\DesktopKanajoPatcher\bin\Release\DesktopKanojoPatcher.exe.config
+E:\Repos\DesktopKanajoPatcher\bin\Release\DesktopKanojoPatcher.exe
+E:\Repos\DesktopKanajoPatcher\bin\Release\DesktopKanojoPatcher.pdb
+E:\Repos\DesktopKanajoPatcher\bin\Release\dnlib.dll
+E:\Repos\DesktopKanajoPatcher\bin\Release\dnlib.xml
+E:\Repos\DesktopKanajoPatcher\obj\Release\DesktopKanajoPatcher.csprojAssemblyReference.cache
+E:\Repos\DesktopKanajoPatcher\obj\Release\DesktopKanajoPatcher.csproj.CoreCompileInputs.cache
+E:\Repos\DesktopKanajoPatcher\obj\Release\DesktopKanajoPatcher.csproj.CopyComplete
+E:\Repos\DesktopKanajoPatcher\obj\Release\DesktopKanojoPatcher.exe
+E:\Repos\DesktopKanajoPatcher\obj\Release\DesktopKanojoPatcher.pdb
