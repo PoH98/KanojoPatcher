@@ -47,12 +47,34 @@ namespace DesktopKanojoPatcher
                 var input = Console.ReadLine();
                 Console.WriteLine("Do you want increase character next move time? (Y or any key to abort)");
                 var yn = Console.ReadLine();
+                int minPatch = 30, maxPatch = 60;
                 if(yn == "y" || yn == "Y")
                 {
                     PatchMove = true;
+                    Console.WriteLine("Please input the minimum delay time: ");
+                    var min = Console.ReadLine();
+                    Console.WriteLine("Please input the maximum delay time: ");
+                    var max = Console.ReadLine();
+                    if(!int.TryParse(min, out minPatch) || !int.TryParse(max, out maxPatch))
+                    {
+                        Console.WriteLine("Are you kidding me? Is this a number for FPS?");
+                        Console.ReadLine();
+                    }
+                    if(minPatch <= 0)
+                    {
+                        minPatch = 30;
+                    }
+                    if(maxPatch <= minPatch)
+                    {
+                        maxPatch = minPatch + 1;
+                    }
                 }
                 if (int.TryParse(input, out int result))
                 {
+                    if(result <= 0)
+                    {
+                        result = 60;
+                    }
                     var sw = Stopwatch.StartNew();
                     Console.WriteLine(" Searching for Steam installation...");
                     var steamPath = default(string);
@@ -115,6 +137,7 @@ namespace DesktopKanojoPatcher
                     if (PatchMove)
                     {
                         PatchMovement patchMove = new PatchMovement();
+                        patchMove.Sys = new int[] { minPatch, maxPatch };
                         patchMove.Apply(DesktopKanojo);
                     }
                     Console.WriteLine(" -----------------------------------");
@@ -142,7 +165,6 @@ namespace DesktopKanojoPatcher
                 {
                     Console.WriteLine("Are you kidding me? Is this a number for FPS?");
                     Console.ReadLine();
-                    return;
                 }
             }
             while (true);
